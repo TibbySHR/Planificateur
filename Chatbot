@@ -86,20 +86,51 @@ Cette démarche, non seulement chronophage, peut également entraîner des choix
 
 ### Fonctionnelles :
 
-- Intégrer un chatbot interactif pour guider les étudiants dans le choix de cours.
-- Permettre une interaction naturelle en langage courant.
-- Proposer des recommandations personnalisées basées sur les préférences et contraintes académiques.
-- Sauvegarder l’historique des conversations pour un suivi personnalisé.
+- Saisie des informations :
+- - Permettre à l’étudiant de saisir les cours déjà suivis (peu importe le format de saisie initialement).
+- - Permettre à l’étudiant de spécifier son domaine d’intérêt (IA, Développement Web, Systèmes, etc.).
+- - Calculer automatiquement le nombre de crédits restants, en distinguant les crédits obligatoires et optionnels.
+- Génération de combinaisons de cours :
+- - Générer des combinaisons de cours pour chaque trimestre en tenant compte :
+- - - Des crédits restants à valider.
+- - - Des cours obligatoires et optionnels disponibles.
+- - - Des disponibilités de cours (ex. : hiver, été, automne).
+- - - Des préalables requis pour certains cours.
+- Gestion des conflits horaires :
+- - Vérifier les conflits d’horaires entre les cours sélectionnés pour un même trimestre.
+- - Éviter de recommander des cours ayant des horaires qui se chevauchent.
+- Remplissage automatique des trimestres :
+- - Remplir automatiquement chaque trimestre avec les cours recommandés (maximum 4 cours par trimestre).
+- - Permettre à l’étudiant de déplacer ou supprimer des cours recommandés.
+- Personnalisation des recommandations :
+- - Adapter les recommandations de cours en fonction :
+- - - Du domaine d’intérêt sélectionné.
+- - - Des préalables déjà validés.
+- - - -Des cours en cours ou prévus pour un trimestre donné.
+- Affichage des crédits :
+- - Mettre à jour le nombre de crédits pour chaque trimestre en temps réel en fonction des cours ajoutés ou supprimés.
 
 ### Non fonctionnelles :
 
-- Assurer la fluidité et la rapidité des réponses.
-- Garantir la confidentialité des informations personnelles des utilisateurs.
-- Maintenir la compatibilité avec l'architecture actuelle (React, FastAPI, MongoDB).
+- Performance :
+- - Le calcul des recommandations doit être effectué en moins de 2 secondes.
+- - L’interface doit être réactive, sans latence visible lors du remplissage des trimestres.
+- Compatibilité :
+- - Compatible avec les navigateurs récents (Chrome, Firefox, Edge).
+- - Responsive : affichage optimisé pour les écrans desktop et tablette.
+- Sécurité :
+- - Les données saisies par l’étudiant (cours suivis, préférences) doivent être conservées de manière sécurisée.
+- - Les recommandations de cours ne doivent pas divulguer des informations personnelles ou des données sensibles.
+- Extensibilité :
+- - Le système doit permettre l’ajout futur de nouveaux programmes, cours ou modules sans refonte majeure de l’architecture.
+- - L’algorithme de recommandation doit être facilement configurable pour intégrer de nouvelles règles (ex. : préalables supplémentaires, nouveaux domaines d’intérêt).
+- Maintenabilité :
+- - Le code source doit être bien structuré et documenté pour permettre des mises à jour ultérieures.
+- - Les modules d’algorithmes de recommandation doivent être indépendants et testables.
+
 
 ## Recherche de solutions
 
-Parmi les solutions existantes, les chatbots académiques sont souvent limités à des réponses prédéfinies ou des filtres simples. Pour dépasser ces limites, nous optons pour un chatbot intelligent utilisant spaCy pour l’analyse sémantique et le traitement du langage naturel. Ce choix permet d’assurer une interaction plus naturelle et des recommandations adaptées aux besoins spécifiques des étudiants. L’utilisation de FastAPI comme interface assure la réactivité et l’intégration avec la base de données MongoDB pour stocker les conversations.
 
 ## Méthodologie
 
