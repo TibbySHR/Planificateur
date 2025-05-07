@@ -1,1 +1,124 @@
 
+# Projet IFT3150: Chatbot Dans L'outil Planificateur
+
+> **Thèmes**: NLP, Science de données, Génie logiciel  
+> **Superviseur**: Louis-Edouard LAFONTANT 
+
+
+## Informations importantes
+
+!!! info "Dates importantes"
+    - **Description du projet** : 16 mai 2025
+    - **Foire 1: Prototypage** : 9-13 juin 2025
+    - **Foire 2: Version beta** : 14-18 juillet 2025
+    - **Présentation et rapport** : 11-15 août 2025
+
+## Équipe
+
+- Haoran Sun
+
+
+## Description du projet
+
+### Contexte
+
+Le Planificateur académique est un outil web développé au Département d’informatique et de recherche opérationnelle (DIRO) de l’Université de Montréal. Il vise à accompagner les étudiants dans la planification de leur parcours universitaire en leur permettant de sélectionner des cours, visualiser la structure des programmes, détecter les conflits d’horaire et valider leur cheminement selon les exigences académiques. 
+
+L’outil offre une interface intuitive pour consulter les horaires des cours, enseignants et salles, ainsi que pour explorer les cours préalables. Il repose sur une infrastructure moderne incluant une base de données MongoDB, une API en FastAPI et une interface en React.
+
+### Problématique ou motivations
+Face à une offre de cours vaste et parfois floue, il devient difficile pour les étudiants de comprendre à quelle orientation appartient chaque cours, quels préalables sont requis ou encore comment optimiser leur cheminement selon leurs intérêts ou contraintes personnelles. Les étudiants doivent souvent naviguer entre plusieurs ressources pour vérifier manuellement la conformité de leur sélection de cours avec les exigences du programme.
+
+Pour répondre à cette problématique, le projet vise à intégrer un agent conversationnel intelligent — un chatbot s'inspirant des modèles LLM (Large Language Models). Contrairement à un simple système de filtrage ou de recherche classique, ce chatbot permettra une interaction naturelle avec l’étudiant, en comprenant ses objectifs (par exemple : se spécialiser en IA, éviter les conflits d’horaire, atteindre un double objectif majeur/mineur) et en lui suggérant dynamiquement des parcours cohérents, adaptés et personnalisés. L’objectif est de rendre la planification plus accessible, plus efficace et mieux alignée sur les aspirations académiques de chaque étudiant.
+
+### Proposition et objectifs
+
+Ce projet propose d’enrichir le planificateur académique existant par l’intégration d’un module conversationnel intelligent, capable d’interagir naturellement avec l’étudiant et de l’accompagner dans ses choix de cours. Inspiré des technologies de modèles de langage à grande échelle (LLM), ce chatbot vise à aller au-delà des filtres classiques en analysant le contexte, les objectifs, et les préférences exprimées en langage naturel.
+
+Les objectifs principaux de cette proposition sont :
+
+- Offrir une expérience utilisateur plus intuitive et personnalisée pour la planification de cheminements
+- Réduire la charge cognitive liée à la compréhension des structures de programme et des préalables
+- Permettre un dialogue interactif pour guider l’étudiant vers des parcours compatibles avec ses intérêts et contraintes
+- Automatiser les recommandations de cours selon différents scénarios académiques (spécialisation, double programme, équilibre charge horaire, etc.)
+
+Ce module intelligent permettra de transformer l’outil en véritable assistant pédagogique, rendant la planification académique plus accessible, efficace et adaptée à chaque profil étudiant.
+
+### Implémentation technique envisagée
+
+Le module chatbot sera intégré à l’application existante selon une architecture modulaire : le front-end React accueillera un composant ChatBot.js dans /app/, tandis que le back-end FastAPI ajoutera une route dédiée dans /api/chat.py. Les échanges se feront via une API REST, en envoyant les messages utilisateur enrichis d’un identifiant de session.
+
+Le serveur analysera les messages avec spaCy pour extraire les intentions (ex. : domaine d’intérêt, contraintes horaires), puis appliquera des règles définies dans /utils/ pour recommander des cours pertinents. L’historique des conversations sera conservé temporairement en mémoire (par session).
+
+Cette architecture permet une interaction fluide entre l’étudiant et le système, en prenant en compte ses préférences, son profil académique et les contraintes du programme pour formuler des recommandations ciblées.
+
+
+## Échéancier
+
+!!! info
+    Le suivi complet est disponible dans la page [Suivi de projet](suivi.md).
+
+| Jalon (*Milestone*)            | Date prévue   | Livrable                            | Statut      |
+|--------------------------------|---------------|-------------------------------------|-------------|
+| Ouverture de projet            | 1 mai         | Proposition de projet               | ✅ Terminé  |
+| Analyse des exigences          | 16 mai        | Document d'analyse                  | 🔄 En cours |
+| Modèle de donneés1             | 23 mai        | Diagramme UML ou entité-association | ⏳ À venir  |
+| Modèle de donneés2             | 30 mai        | Diagramme UML ou modèle C4          | ⏳ À venir  |
+| Architecture                   | 6 juin        | Diagramme UML ou modèle C4          | ⏳ À venir  |
+| Revue de conception            | 13 juin       | Feedback encadrant + ajustements    | ⏳ À venir  |
+| Implémentation v1              | 20 juin       | Application v1                      | ⏳ À venir  |
+| Implémentation v2 + tests      | 11 juillet    | Application v2 + Tests              | ⏳ À venir  |
+| Implémentation v3              | 1er août      | Version finale                      | ⏳ À venir  |
+| Tests                          | 11-31 juillet | Plan + Résultats intermédiaires     | ⏳ À venir  |
+| Évaluation finale              | 8 août        | Analyse des résultats + Discussion  | ⏳ À venir  |
+| Présentation + Rapport         | 15 août       | Présentation + Rapport              | ⏳ À venir  |
+
+
+# Études préliminaires
+
+## Analyse du problème
+
+Lorsqu'ils planifient leur parcours académique, les étudiants se retrouvent souvent confrontés à une offre de cours vaste et peu structurée, rendant difficile le choix des cours adaptés à leurs objectifs académiques. En l'absence d'un système de recommandation intelligent, ils doivent naviguer manuellement à travers les programmes pour identifier les cours correspondant à leur domaine d'intérêt, respecter les préalables et s'assurer de l'alignement avec les exigences de crédits.
+
+Cette démarche, non seulement chronophage, peut également entraîner des choix non optimisés, surtout pour les étudiants souhaitant se spécialiser dans des domaines précis (IA, systèmes, développement web). Un module de recommandation interactif, basé sur l’analyse des préférences académiques et des antécédents de cours suivis, permettrait d’orienter efficacement les étudiants vers les cours les plus pertinents.
+
+## Exigences
+
+### Fonctionnelles :
+
+- Intégrer un chatbot interactif pour guider les étudiants dans le choix de cours.
+- Permettre une interaction naturelle en langage courant.
+- Proposer des recommandations personnalisées basées sur les préférences et contraintes académiques.
+- Sauvegarder l’historique des conversations pour un suivi personnalisé.
+
+### Non fonctionnelles :
+
+- Assurer la fluidité et la rapidité des réponses.
+- Garantir la confidentialité des informations personnelles des utilisateurs.
+- Maintenir la compatibilité avec l'architecture actuelle (React, FastAPI, MongoDB).
+
+## Recherche de solutions
+
+Parmi les solutions existantes, les chatbots académiques sont souvent limités à des réponses prédéfinies ou des filtres simples. Pour dépasser ces limites, nous optons pour un chatbot intelligent utilisant spaCy pour l’analyse sémantique et le traitement du langage naturel. Ce choix permet d’assurer une interaction plus naturelle et des recommandations adaptées aux besoins spécifiques des étudiants. L’utilisation de FastAPI comme interface assure la réactivité et l’intégration avec la base de données MongoDB pour stocker les conversations.
+
+## Méthodologie
+
+La méthodologie adoptée s'appuie sur l'infrastructure existante du planificateur académique et l’intégration directe des données d’inscription des étudiants issues de Studium. Le processus se décline en trois étapes :
+
+### Exploitation des données existantes
+- Accéder aux données d’inscription des étudiants via les enregistrements disponibles dans Studium, incluant les cours suivis, les préalables validés et les crédits accumulés.
+- Structurer ces informations dans MongoDB pour permettre un accès rapide aux antécédents académiques des étudiants, facilitant ainsi l’alignement des recommandations sur le parcours réel de l’utilisateur.
+- Créer des index pour optimiser les requêtes fréquentes, telles que les cours manquants dans un domaine ou les crédits restants à valider.
+
+### Développement du module chatbot 
+- Intégrer un composant React (ChatBot.js) offrant une interface conversationnelle intuitive, permettant à l’étudiant de formuler des demandes en langage naturel.
+- Créer une route API /chat avec FastAPI pour :
+- - Analyser les intentions utilisateur (ex. : spécialisation en IA, cours optionnels, validation des préalables) à l’aide de spaCy.
+- - Interroger la base de données MongoDB pour obtenir des suggestions basées sur l’historique d’inscription et les segments académiques pertinents.
+- - Gérer la persistance du contexte de conversation, afin de fournir des réponses cohérentes et adaptées aux questions successives.
+
+### Validation et tests
+
+- Effectuer des tests fonctionnels pour vérifier la cohérence des recommandations, notamment dans des scénarios complexes tels que le double programme ou les cours avec plusieurs prérequis.
+- Implémenter des cas de test basés sur des profils académiques types pour évaluer la précision des suggestions.
+- Recueillir les retours d’expérience des utilisateurs afin de calibrer le module chatbot et affiner les règles de recommandation.
