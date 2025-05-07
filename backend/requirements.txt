@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+motor
+beanie
+pydantic_settings
+email-validator
+pymongo
+python-decouple
+python-multipart
+faker
+tqdm
+pytest
+pytest-asyncio
+httpx
+async-lru
+ics
+pytz

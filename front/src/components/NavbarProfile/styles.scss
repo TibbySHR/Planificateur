@@ -1,0 +1,68 @@
+.navbar_profile {
+  position: relative;
+
+  &__account {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+    background-color: bisque;
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 6px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &__options {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    width: 198px;
+    border-radius: 8px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 6px;
+    background-color: #ffffff;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+    display: flex;
+    flex-direction: column;
+
+    &--active {
+      top: 70px;
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.4s;
+    }
+
+    &__item {
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f2fcfd;
+      }
+
+      &__icon {
+        width: 22px;
+        height: 22px;
+        margin-right: 8px;
+      }
+
+      &__label {
+        font-size: 16px;
+      }
+    }
+  }
+}

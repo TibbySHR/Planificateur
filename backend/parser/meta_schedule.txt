@@ -1,0 +1,12 @@
+{
+	<course_id_string> : {
+		<season_string> :{
+			<section_string> : { => "A"
+				<volet_string>: => "th A"
+				[
+				<activity> => seperated by day
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,54 @@
+$grid_item_width: 295px;
+
+.semesters {
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb;
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+  height: fit-content;
+  border: 1px solid #c6c4c4;
+
+  &__header {
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    border-bottom: 1px solid #c6c4c4;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  &__total_credits {
+    font-weight: 500;
+
+    &--success {
+      color: green;
+    }
+
+    &--error {
+      color: red;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($grid_item_width, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+
+  &__grid_skeleton {
+    width: 100%;
+  }
+
+  &__skeleton_item {
+    min-width: $grid_item_width;
+    height: 110px;
+  }
+
+  &__trash_all_container {
+    display: inline;
+  }
+}

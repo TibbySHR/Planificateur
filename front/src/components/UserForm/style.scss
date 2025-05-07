@@ -1,0 +1,82 @@
+/* UserForm&__css */
+.UserForm {
+&__container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  &__heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__formGroup {
+    margin-bottom: 15px;
+  }
+  
+  &__label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  &__input,
+  &__select {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+  &__checkboxLabel {
+    margin-bottom: 8px;
+    cursor:pointer;
+    font-size: 14px;
+    input[type="checkbox"] {
+      cursor: pointer; /* Make the checkbox itself a pointer */
+    }
+  }
+  &__disabled {
+    color: gray;
+    font-weight: 300;
+    cursor: not-allowed !important;
+  
+  }
+
+  
+  &__select {
+    height: 100px; /* Adjust the height as needed */
+  }
+  
+  &__button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  &__checkboxGroup {
+    display: flex;
+    flex-direction: column;  /* Aligns checkboxes vertically */
+  }
+  
+  &__option  {
+    padding-left: 10px;
+  }
+}

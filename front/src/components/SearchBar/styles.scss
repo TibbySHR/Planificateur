@@ -1,0 +1,19 @@
+.position-relative {
+    position: relative;
+}
+#CourseSelectorId {
+    width: 500px;
+}
+
+.dropdown-menu {
+    max-height: 300px; /* Adjust as needed */
+    overflow-y: auto;
+    z-index: 1050; /* Bootstrap default z-index for dropdowns */
+}
+
+.dropdown-item {
+    cursor: pointer;
+    &:hover {
+        background-color: #f8f9fa; /* Bootstrap light hover color */
+    }
+}

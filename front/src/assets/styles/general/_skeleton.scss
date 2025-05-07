@@ -1,0 +1,15 @@
+@keyframes skeletonBackground {
+  0% {
+    background-color: #ced4da;
+  }
+  50% {
+    background-color: #e1e7ee;
+  }
+  100% {
+    background-color: #ced4da;
+  }
+}
+
+.skeleton_bg_animation {
+  animation: skeletonBackground 0.7s linear infinite;
+}

@@ -1,0 +1,11 @@
+.semester_toolbar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &__button {
+    background-color: transparent !important;
+    border: 1px solid #c6c4c4;
+    border-radius: 50% !important;
+  }
+}

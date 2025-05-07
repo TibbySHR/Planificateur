@@ -1,0 +1,42 @@
+.program_courses {
+  display: flex;
+  position: relative;
+  transition: left 0.5s;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebeb;
+    padding: 10px 5px;
+    border: 1px solid #c6c4c4;
+    border-radius: 4px;
+    width: 425px;
+
+    &--hide {
+      display: none;
+    }
+  }
+
+  &__drawer {
+    width: 13px;
+    height: 100%;
+    background-color: #c6c4c4;
+    border-radius: 4px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+
+    &__arrow {
+      background-color: #686868;
+
+      height: 50px;
+      width: inherit;
+      margin-top: 250px;
+
+      &--open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

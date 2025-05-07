@@ -1,0 +1,19 @@
+name: Deploy Back-end
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-back:
+    name: Deploy Back-end
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Deploy Back-end to Render
+        # uses: johnbeynon/render-deploy-action@747373cdb7b9b3f561438e063ee0815b71584f1b
+        # # bump the version of the action to the latest commit hash more details here https://github.com/johnbeynon/render-deploy-action/issues/7
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.BACKEND_SERVICE_ID }}
+          api-key: ${{ secrets.RENDER_API_KEY }}

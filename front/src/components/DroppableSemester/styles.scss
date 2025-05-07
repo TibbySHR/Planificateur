@@ -1,0 +1,111 @@
+$semesterPadding: 10px;
+
+.semester {
+  border: 2px solid #d6effc;
+  display: flex;
+  flex-direction: column;
+  padding: $semesterPadding;
+  height: 100%;
+  position: relative;
+  background-color: #f8f9fd;
+
+  &--winter {
+    border-color: rgb(225, 251, 255);
+  }
+
+  &--autumn {
+    border-color: #fff6ea;
+  }
+
+  &--summer {
+    border-color: rgb(227, 249, 204);
+  }
+
+  &--errored {
+    border: 2px solid red;
+  }
+
+  &--expanded {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+
+  &--shrinked {
+    display: none;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 2px;
+  }
+
+  &__credits {
+    font-size: 16px;
+  }
+
+  &__body {
+    display: flex;
+    height: 100%;
+
+    &--expanded {
+      padding: 0 30px 30px 30px;
+    }
+  }
+
+  &__courses {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+
+    &--column {
+      flex-direction: column;
+      margin-top: 65px;
+      gap: 8px;
+    }
+  }
+
+  &__calendar {
+    flex-grow: 1;
+    margin-left: 30px;
+  }
+
+  &__course_empty {
+    font-size: 14px;
+    font-weight: 500;
+    color: #918585;
+    text-align: center;
+    margin: 0 auto 15px;
+  }
+
+  &__trash_icon_btn {
+    position: absolute;
+    bottom: $semesterPadding;
+    right: $semesterPadding;
+  }
+
+  &__calendar_icon_btn {
+    position: absolute;
+    top: $semesterPadding;
+    right: $semesterPadding;
+  }
+
+  &__error_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 23px;
+    height: 23px;
+    margin-top: 4px;
+    cursor: pointer;
+  }
+}

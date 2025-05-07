@@ -1,0 +1,51 @@
+{
+  "navbar.course_selection": "Course Selection",
+  "navbar.about": "About",
+  "navbar.course_schedule": "Course Schedule",
+
+  "searchbar.placeholder": "Enter the program name",
+  "seachbar.program.courses.placeholder": "Search for a course in this program",
+  "course_search.placeholder": "Search for courses",
+
+  "semester.drop_message": "Drag and drop your courses here",
+  "semester.resize.expand": "Expand Semester",
+  "semester.resize.collapse": "Collapse Semester",
+  "semester.remove.button": "Empty Semester",
+  "course_list.program_structure": "Program Structure",
+  "total_credit": "Total Credits",
+  "credit": "credit",
+  "credits": "credits",
+
+  "export": "Export",
+  "export.tooltip": "Export your course selections",
+  "copy.tooltip": "Copy URL",
+  "deleteall.tooltip": "Empty schedule",
+
+  "copied.toast": "Copied to the clipboard",
+  "form.name": "Schedule name",
+  "form.name.placeholder": "Enter the name",
+  "form.chooseOptions": "Default segments",
+  "form.title": "Export your schedule",
+  "form.submit": "Submit",
+  "form.share": "Share",
+
+  "programresearch": "Search a program",
+  "orientation": "Orientation",
+  "program": "Program",
+  "department": "Department",
+  "faculty": "Faculty",
+
+  "byDefault": "No orientation",
+
+  "winter": "winter",
+  "summer": "summer",
+  "autumn": "autumn",
+
+  "filter.header": "Program selection",
+  "filter.dropdowns.title": "Find your program step by step",
+  "filter.search.title": "Find your program by name",
+
+  "advancedSearch.title": "Advanced search",
+  "AdvancedSearch.searchButton": "Search",
+  "advancedSearch.placeholder": "Search schedules"
+}

@@ -1,0 +1,54 @@
+.navbar {
+  padding: 8px 20px !important;
+  box-shadow: 0 0px 10px rgb(0 0 0 / 27%);
+
+  &__logo_img {
+    width: 100px;
+  }
+
+  &__fac_logo_img {
+    height: 35px;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__toggle_btn {
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  &__about {
+    margin-left: auto;
+    cursor: pointer;
+    &__image {
+      border-radius: 50%;
+    }
+  }
+
+  &__about_container_element {
+    justify-content: center;
+  }
+
+  &__about_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+    height: auto;
+  }
+  &__about_container > div {
+    flex: 0 0 20%;
+    box-sizing: border-box;
+  }
+  &__about_container img {
+    width: 100%; /* Ensures the image takes the full width of its container */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: cover; /* Ensures the image covers the container */
+    display: block; /* Removes any inline spacing */
+  }
+}

@@ -1,0 +1,24 @@
+
+Whole json object:
+[
+    <one_course_object>,
+    <one_course_object>,
+    <one_course_object>,
+    ...
+]
+
+One course object:
+{
+    _id : "sigle_string",
+	code: "IFT"
+	number: "2015"
+    name : "Structure de données",
+    description : "string_descrition",
+    credit : float or -1 if no credit was found,
+	available_terms: { summer: bool, winter: bool, autumn: bool }
+	available_periods: { daytime: bool, evening: bool }
+    prerequisite_courses : ["IFT 2015", "MAT 1400"],
+    equivalent_courses   : [],
+    concomitant_courses  : [],
+    requirement_text: "string_text"
+}

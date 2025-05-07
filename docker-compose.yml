@@ -1,0 +1,65 @@
+services:
+  mongo:
+    image: mongo:7.0-jammy
+    container_name: mongo
+    volumes:
+      - ./mongo_data:/data/db
+    networks:
+      - planificateur-academique
+    restart: always
+
+  init-mongo:
+    build:
+      context: backend/parser
+      dockerfile: Dockerfile
+    container_name: init-mongo
+    environment:
+      - MONGO_URL=mongodb://mongo:27017
+      - MONGO_DB=planificateur-academique
+    networks:
+      - planificateur-academique
+    depends_on:
+      mongo:
+        condition: service_started
+    restart: on-failure
+    volumes:
+    - ./data:/app/data
+
+  backend:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    container_name: backend
+    environment:
+      - MONGO_CONNECTION_STRING=mongodb://mongo:27017
+      - MONGO_DB_NAME=planificateur-academique
+      - BACKEND_CORS_ORIGINS=["http://mongo:27017", "http://localhost:27017", "http://localhost:3000"]
+      - BASE_URL="http://localhost:8000"
+    networks:
+      - planificateur-academique
+    ports:
+      - 8000:8000
+    depends_on:
+      init-mongo:
+        condition: service_completed_successfully
+    restart: always
+
+  frontend:
+    build:
+      context: front
+      dockerfile: Dockerfile
+    container_name: frontend
+    environment:
+      - REACT_APP_API_BASE_URL=http://localhost:8000
+    networks:
+      - planificateur-academique
+    ports:
+      - 3000:3000
+    depends_on:
+      backend:
+        condition: service_started
+    restart: always
+
+networks:
+  planificateur-academique:
+    driver: bridge

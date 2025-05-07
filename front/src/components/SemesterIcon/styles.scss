@@ -1,0 +1,38 @@
+.semester_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+
+  &__svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--small {
+    padding: 4px;
+    border-radius: 3px;
+    .semester_icon__svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &--large {
+    //To-do: Add the large style later here.
+  }
+
+  &__selector {
+    position: absolute;
+    top: -57px;
+    padding-bottom: 30px;
+    transition: opacity 0.2s linear;
+
+    &--hide {
+      opacity: 0;
+      visibility: none;
+      pointer-events: none;
+    }
+  }
+}

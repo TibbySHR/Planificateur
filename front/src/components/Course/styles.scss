@@ -1,0 +1,114 @@
+.course {
+  display: flex;
+  flex-direction: column;
+  cursor: grab;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 6px;
+  position: relative;
+
+  &--md {
+    width: 190px;
+    padding: 8px;
+  }
+
+  &--sm {
+    padding: 4px;
+    margin: 0;
+    width: 110px;
+  }
+
+  &_choix {
+    width: 250px;
+    background-color: #e4e6dd;
+    transition: all 0.3s;
+    cursor: default;
+
+    &--searching {
+      min-height: 250px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    &--sm {
+      margin-bottom: 2px;
+    }
+  }
+
+  &__code {
+    font-weight: 700;
+    margin: 0;
+
+    &--md {
+      font-size: 18px;
+    }
+
+    &--sm {
+      font-size: 14px;
+    }
+  }
+
+  &__credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #eeeeee;
+
+    &--md {
+      width: 25px;
+      height: 25px;
+      border-radius: 4px;
+    }
+
+    &--sm {
+      text-align: center;
+      width: 15px;
+      height: 15px;
+      font-size: 12px;
+      border-radius: 2px;
+    }
+  }
+
+  &__title {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis for overflow text */
+    display: inline-block; /* Ensure the properties apply correctly */
+    width: 100%; /* Adjust the width as needed */
+    
+
+    &--sm {
+      display: none;
+    }
+  }
+
+  &__block {
+    margin: 6px 0;
+    color: #918585;
+    font-size: 15px;
+  }
+
+  &__semesters {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__remove_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ff0000b4;
+    cursor: pointer;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+  }
+}

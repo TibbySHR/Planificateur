@@ -1,0 +1,14 @@
+.form_field_skeleton {
+  &__label {
+    width: 100px;
+    height: 18px;
+    border-radius: 8px;
+    margin-bottom: 0 !important;
+  }
+
+  &__field {
+    width: 200px;
+    height: 24px;
+    border-radius: 12px;
+  }
+}

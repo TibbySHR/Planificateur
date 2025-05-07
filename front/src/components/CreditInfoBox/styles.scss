@@ -1,0 +1,15 @@
+.CreditInfoBox{
+
+  &__info {
+    align-items: center;
+    margin-left: auto;
+    background-color: #eee;
+    color: #4b545e;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 13px;
+    white-space: nowrap;
+    font-weight: normal;
+    width: fit-content;
+  }
+}

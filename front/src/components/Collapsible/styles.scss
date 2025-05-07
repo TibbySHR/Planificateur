@@ -1,0 +1,44 @@
+.collapsible {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__header_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+  }
+
+  &__header_title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 6px;
+  }
+
+  &__header_error_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 4px;
+    top: 2px;
+  }
+
+  &__header_error_tooltip {
+    > .tooltip-inner {
+      background-color: rgb(248, 133, 152);
+      color: #000;
+    }
+    > .tooltip-arrow::before,
+    > .tooltip-arrow::before {
+      border-right-color: rgb(248, 133, 152);
+    }
+  }
+}
