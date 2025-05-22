@@ -818,25 +818,28 @@
 </div>
 <h2 id="equipe">Équipe<a class="headerlink" href="#equipe" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Haoran Sun</li>
+<li>Haoran Sun    20260543</li>
 </ul>
 <h2 id="description-du-projet">Description du projet<a class="headerlink" href="#description-du-projet" title="Permanent link">&para;</a></h2>
 <h3 id="contexte">Contexte<a class="headerlink" href="#contexte" title="Permanent link">&para;</a></h3>
-<p>Le Planificateur académique est un outil web développé au Département d’informatique et de recherche opérationnelle (DIRO) de l’Université de Montréal. Il vise à accompagner les étudiants dans la planification de leur parcours universitaire en leur permettant de sélectionner des cours, visualiser la structure des programmes, détecter les conflits d’horaire et valider leur cheminement selon les exigences académiques. </p>
-<p>L’outil offre une interface intuitive pour consulter les horaires des cours, enseignants et salles, ainsi que pour explorer les cours préalables. Il repose sur une infrastructure moderne incluant une base de données MongoDB, une API en FastAPI et une interface en React.</p>
+<p>Dans le contexte universitaire, la planification du parcours académique reste une tâche complexe pour de nombreux étudiants. Ces derniers doivent non seulement consulter les structures de programmes, vérifier les prérequis, suivre leur accumulation de crédits, mais aussi choisir parmi une multitude de cours répartis sur plusieurs trimestres. Lorsque s’ajoutent des intérêts personnels (comme l’intelligence artificielle ou le développement web), la recherche manuelle d’un cheminement optimal devient fastidieuse.</p>
+<p>Face à ces enjeux, l’intégration d’un assistant conversationnel intelligent devient pertinente. Un tel chatbot permettrait aux étudiants d’exprimer librement leurs besoins en langage naturel — par exemple : « Je veux me spécialiser en IA» — et de recevoir instantanément des suggestions de cours pertinentes et cohérentes avec leur avancement. L’outil vise ainsi à rendre la planification plus fluide, plus intuitive, et mieux alignée avec les objectifs individuels de chaque étudiant.</p>
 <h3 id="problematique-ou-motivations">Problématique ou motivations<a class="headerlink" href="#problematique-ou-motivations" title="Permanent link">&para;</a></h3>
-<p>Face à une offre de cours vaste et parfois floue, il devient difficile pour les étudiants de comprendre à quelle orientation appartient chaque cours, quels préalables sont requis ou encore comment optimiser leur cheminement selon leurs intérêts ou contraintes personnelles. Les étudiants doivent souvent naviguer entre plusieurs ressources pour vérifier manuellement la conformité de leur sélection de cours avec les exigences du programme.</p>
-<p>Pour répondre à cette problématique, le projet vise à intégrer un agent conversationnel intelligent — un chatbot s'inspirant des modèles LLM (Large Language Models). Contrairement à un simple système de filtrage ou de recherche classique, ce chatbot permettra une interaction naturelle avec l’étudiant, en comprenant ses objectifs (par exemple : se spécialiser en IA, éviter les conflits d’horaire, atteindre un double objectif majeur/mineur) et en lui suggérant dynamiquement des parcours cohérents, adaptés et personnalisés. L’objectif est de rendre la planification plus accessible, plus efficace et mieux alignée sur les aspirations académiques de chaque étudiant.</p>
+<p>Dans un contexte où l’offre de cours est vaste, technique et souvent difficile à interpréter, de nombreux étudiants peinent à choisir les cours les plus pertinents pour eux. Il est fréquent qu’ils ne sachent pas quels cours correspondent réellement à leurs intérêts, à leurs forces personnelles ou à leur orientation académique (ex. : intelligence artificielle, systèmes, développement logiciel).</p>
+<p>De plus, même lorsqu’ils identifient un domaine cible, il leur est difficile de savoir quels cours sont requis, quels préalables doivent être validés ou dans quel ordre les suivre. Ce manque d’accompagnement intelligent oblige les étudiants à effectuer des vérifications manuelles dispersées, sans assurance de faire les bons choix.</p>
+<p>Face à cette problématique, le projet vise à développer un agent conversationnel intelligent capable de comprendre les préférences, les objectifs et les contraintes de l’étudiant, afin de lui proposer des suggestions de cours adaptées, alignées à la fois avec les exigences du programme et ses aspirations personnelles. L’ambition est de rendre la planification académique plus fluide, plus personnalisée et plus stratégique.</p>
 <h3 id="proposition-et-objectifs">Proposition et objectifs<a class="headerlink" href="#proposition-et-objectifs" title="Permanent link">&para;</a></h3>
-<p>Ce projet propose d’enrichir le planificateur académique existant par l’intégration d’un module conversationnel intelligent, capable d’interagir naturellement avec l’étudiant et de l’accompagner dans ses choix de cours. Inspiré des technologies de modèles de langage à grande échelle (LLM), ce chatbot vise à aller au-delà des filtres classiques en analysant le contexte, les objectifs, et les préférences exprimées en langage naturel.</p>
+<p>Ce projet propose le développement d’un agent conversationnel intelligent destiné à accompagner les étudiants dans leurs décisions de parcours académique. Basé sur les avancées récentes en traitement du langage naturel et les modèles de langage à grande échelle (LLM), ce chatbot vise à comprendre les intentions, les préférences et les contraintes exprimées en langage courant, afin de proposer des recommandations de cours ciblées et pertinentes.</p>
+<p>Contrairement aux systèmes de recherche traditionnels, ce chatbot permet un dialogue fluide et contextuel.</p>
 <p>Les objectifs principaux de cette proposition sont :</p>
 <ul>
-<li>Offrir une expérience utilisateur plus intuitive et personnalisée pour la planification de cheminements</li>
-<li>Réduire la charge cognitive liée à la compréhension des structures de programme et des préalables</li>
-<li>Permettre un dialogue interactif pour guider l’étudiant vers des parcours compatibles avec ses intérêts et contraintes</li>
-<li>Automatiser les recommandations de cours selon différents scénarios académiques (spécialisation, double programme, équilibre charge horaire, etc.)</li>
+<li>Comprendre les préférences académiques (domaine d’intérêt, les matières maîtrisées, rythme de travail, etc.) exprimées en langage naturel.</li>
+<li>Analyser les cours déjà suivis pour déterminer les préalables déjà validés et les crédits restants.</li>
+<li>Proposer des combinaisons de cours compatibles avec les contraintes exprimées : conflits d’horaire, équilibre de la charge de travail, programmes doubles, etc.</li>
+<li>Fournir des suggestions interactives (avec possibilité de relancer, affiner ou modifier la demande).</li>
+<li>Accompagner la planification sur plusieurs trimestres, en construisant un cheminement cohérent selon les exigences du programme.</li>
 </ul>
-<p>Ce module intelligent permettra de transformer l’outil en véritable assistant pédagogique, rendant la planification académique plus accessible, efficace et adaptée à chaque profil étudiant.</p>
+<p>charge mentale des étudiants et de faciliter des décisions stratégiques, tout en s’adaptant aux profils et objectifs académiques variés.</p>
 <h3 id="implementation-technique-envisagee">Implémentation technique envisagée<a class="headerlink" href="#implementation-technique-envisagee" title="Permanent link">&para;</a></h3>
 <p>Le module chatbot sera intégré à l’application existante selon une architecture modulaire : le front-end React accueillera un composant ChatBot.js dans /app/, tandis que le back-end FastAPI ajoutera une route dédiée dans /api/chat.py. Les échanges se feront via une API REST, en envoyant les messages utilisateur enrichis d’un identifiant de session.</p>
 <p>Le serveur analysera les messages avec spaCy pour extraire les intentions (ex. : domaine d’intérêt, contraintes horaires), puis appliquera des règles définies dans /utils/ pour recommander des cours pertinents. L’historique des conversations sera conservé temporairement en mémoire (par session).</p>
@@ -866,7 +869,7 @@
 <td>Analyse des exigences</td>
 <td>16 mai</td>
 <td>Document d'analyse</td>
-<td>🔄 En cours</td>
+<td>✅ Terminé</td>
 </tr>
 <tr>
 <td>Modèle de donneés1</td>
