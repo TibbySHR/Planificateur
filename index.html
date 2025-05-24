@@ -839,7 +839,6 @@
 <li>Fournir des suggestions interactives (avec possibilité de relancer, affiner ou modifier la demande).</li>
 <li>Accompagner la planification sur plusieurs trimestres, en construisant un cheminement cohérent selon les exigences du programme.</li>
 </ul>
-<p>charge mentale des étudiants et de faciliter des décisions stratégiques, tout en s’adaptant aux profils et objectifs académiques variés.</p>
 <h3 id="implementation-technique-envisagee">Implémentation technique envisagée<a class="headerlink" href="#implementation-technique-envisagee" title="Permanent link">&para;</a></h3>
 <p>Le module chatbot sera intégré à l’application existante selon une architecture modulaire : le front-end React accueillera un composant ChatBot.js dans /app/, tandis que le back-end FastAPI ajoutera une route dédiée dans /api/chat.py. Les échanges se feront via une API REST, en envoyant les messages utilisateur enrichis d’un identifiant de session.</p>
 <p>Le serveur analysera les messages avec spaCy pour extraire les intentions (ex. : domaine d’intérêt, contraintes horaires), puis appliquera des règles définies dans /utils/ pour recommander des cours pertinents. L’historique des conversations sera conservé temporairement en mémoire (par session).</p>
