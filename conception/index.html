@@ -535,6 +535,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#front-end-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front-end (React)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      API (FastAPI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moteur-de-recommandation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moteur de recommandation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-du-calendrier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion du calendrier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-entre-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication entre modules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -671,6 +722,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#front-end-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front-end (React)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      API (FastAPI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moteur-de-recommandation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moteur de recommandation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-du-calendrier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion du calendrier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-entre-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication entre modules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -721,17 +823,71 @@
 
 <h1 id="conception">Conception<a class="headerlink" href="#conception" title="Permanent link">&para;</a></h1>
 <h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<p>L’architecture du système repose sur une approche modulaire centrée autour du module conversationnel. Elle s’organise en trois couches principales : l’interface utilisateur (front-end), le serveur applicatif (back-end) et le moteur de recommandation.</p>
+<h3 id="front-end-react">Front-end (React)<a class="headerlink" href="#front-end-react" title="Permanent link">&para;</a></h3>
+<p>L’interface utilisateur inclut un composant dédié <code>ChatBot.js</code>, qui permet à l’étudiant d’interagir en langage naturel. Ce composant assure :</p>
 <ul>
-<li>Décrire l'architecture du système proposé.</li>
+<li>l’envoi des messages au serveur via des requêtes HTTP (format JSON) ;</li>
+<li>l’affichage dynamique du dialogue ;</li>
+<li>l’insertion automatique des cours recommandés dans le calendrier académique.</li>
 </ul>
+<h3 id="api-fastapi">API (FastAPI)<a class="headerlink" href="#api-fastapi" title="Permanent link">&para;</a></h3>
+<p>Le back-end expose une API REST dans le fichier <code>/api/chat.py</code>, qui reçoit les messages utilisateur accompagnés d’un identifiant de session. L’API :</p>
+<ul>
+<li>analyse le message à l’aide de spaCy pour en extraire les intentions (intérêts, préférences, objectifs) ;</li>
+<li>conserve le contexte de la session (dans la mémoire du serveur) pour permettre une interaction multi-tours ;</li>
+<li>appelle le moteur de recommandation selon les informations disponibles.</li>
+</ul>
+<h3 id="moteur-de-recommandation">Moteur de recommandation<a class="headerlink" href="#moteur-de-recommandation" title="Permanent link">&para;</a></h3>
+<p>Situé dans le dossier <code>/utils/</code>, ce moteur applique une logique à base de règles simples pour :</p>
+<ul>
+<li>exclure les cours déjà suivis ;</li>
+<li>identifier les cours obligatoires non encore validés ;</li>
+<li>croiser les intérêts exprimés avec les cours restants disponibles ;</li>
+<li>générer des combinaisons de cours cohérentes (maximum 4 par trimestre) ;</li>
+<li>fournir plusieurs options adaptées, prêtes à être intégrées dans le calendrier.</li>
+</ul>
+<h3 id="gestion-du-calendrier">Gestion du calendrier<a class="headerlink" href="#gestion-du-calendrier" title="Permanent link">&para;</a></h3>
+<p>Une fois la combinaison de cours validée, elle est automatiquement insérée dans le calendrier académique de l’interface, en tenant compte :</p>
+<ul>
+<li>des trimestres où les cours sont offerts ;</li>
+<li>des horaires disponibles ;</li>
+<li>des éventuels ajustements manuels par l’étudiant.</li>
+</ul>
+<h3 id="communication-entre-modules">Communication entre modules<a class="headerlink" href="#communication-entre-modules" title="Permanent link">&para;</a></h3>
+<p>Tous les échanges entre le front-end et le back-end sont gérés via des appels API REST asynchrones, garantissant une interaction fluide et sans rechargement de page. Le système est conçu pour être extensible, permettant l’évolution du moteur de recommandation ou le remplacement du NLP.</p>
 <h2 id="choix-technologiques">Choix technologiques<a class="headerlink" href="#choix-technologiques" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Justifier les technologies et outils choisis.</li>
+<li>
+<p><strong>React (Front-end)</strong>
+  Utilisé pour construire une interface interactive et réactive, notamment le composant <code>ChatBot.js</code>.</p>
+</li>
+<li>
+<p><strong>FastAPI (Back-end)</strong>
+  Framework léger et performant pour créer l’API REST, bien adapté au traitement NLP en Python.</p>
+</li>
+<li>
+<p><strong>spaCy (NLP)</strong>
+  Bibliothèque efficace pour l’extraction d’intentions à partir du langage naturel, intégrée côté serveur.</p>
+</li>
+<li>
+<p><strong>JSON (échange de données)</strong>
+  Format léger pour les communications entre le front-end et l’API.</p>
+</li>
 </ul>
 <h2 id="modeles-et-diagrammes">Modèles et diagrammes<a class="headerlink" href="#modeles-et-diagrammes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Inclure des diagrammes UML, maquettes, etc.</li>
+<li><strong>Diagramme de UML</strong></li>
 </ul>
+<p><img alt="Diagramme de UML" src="../assets/chatbot-uml.png" /></p>
+<ul>
+<li><strong>Diagramme de Sequence</strong></li>
+</ul>
+<p><img alt="Diagramme de séquence du chatbot" src="../assets/chatbot-sequence.png" /></p>
+<ul>
+<li><strong>Architecture Logiciel</strong></li>
+</ul>
+<p><img alt="Diagramme de architecture logiciel" src="../assets/architecture-logiciel.png" /></p>
 <h2 id="prototype">Prototype<a class="headerlink" href="#prototype" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Inclure des diagrammes UML, maquettes, etc.</li>
