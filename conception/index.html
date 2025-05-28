@@ -613,6 +613,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Prototype">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-interface-du-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Interface du chatbot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dialogue-simule" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Dialogue simulé
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-recommandations-affichees" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Recommandations affichées
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-diagrammes-uml-de-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Diagrammes UML / de séquence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-maquette" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Maquette
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -800,6 +851,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Prototype">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-interface-du-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Interface du chatbot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dialogue-simule" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Dialogue simulé
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-recommandations-affichees" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Recommandations affichées
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-diagrammes-uml-de-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Diagrammes UML / de séquence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-maquette" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Maquette
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -889,8 +991,67 @@
 </ul>
 <p><img alt="Diagramme de architecture logiciel" src="../assets/architecture-logiciel.png" /></p>
 <h2 id="prototype">Prototype<a class="headerlink" href="#prototype" title="Permanent link">&para;</a></h2>
+<h3 id="1-interface-du-chatbot">1. Interface du chatbot<a class="headerlink" href="#1-interface-du-chatbot" title="Permanent link">&para;</a></h3>
+<p><strong>Objectif</strong> : Permettre à l’étudiant d’échanger librement avec le système, dans une interface de type messagerie.</p>
+<p><strong>Implémentation actuelle</strong> :</p>
 <ul>
-<li>Inclure des diagrammes UML, maquettes, etc.</li>
+<li>Un composant React <code>ChatBot.js</code> a été intégré à l’interface du planificateur.</li>
+<li>L’interface comprend un champ de saisie de texte, un bouton “Envoyer”, et une zone d’affichage des messages échangés.</li>
+<li>Les messages sont envoyés à l’API via une requête HTTP (POST en JSON), puis les réponses sont affichées dans le fil de discussion.</li>
+</ul>
+<p><strong>Comportement attendu</strong> :
+L’étudiant peut formuler des phrases libres comme “Je veux me spécialiser en IA” ou “Je suis bon en développement web”, et recevoir une réponse textuelle immédiate.</p>
+<hr />
+<h3 id="2-dialogue-simule">2. Dialogue simulé<a class="headerlink" href="#2-dialogue-simule" title="Permanent link">&para;</a></h3>
+<p><strong>Objectif</strong> : Valider le mécanisme d’envoi-réception entre l’interface et le serveur.</p>
+<p><strong>Fonctionnement</strong> :</p>
+<ul>
+<li>Le message envoyé par l’étudiant est analysé côté serveur à l’aide de règles conditionnelles simples.</li>
+<li>En fonction de mots-clés identifiés (ex. : “IA”, “web”), une réponse adaptée est renvoyée.</li>
+<li>Aucun traitement NLP avancé n’est encore intégré à ce stade, l’objectif étant de tester la fluidité du flux.</li>
+</ul>
+<p><strong>Exemple d’interaction</strong> :</p>
+<blockquote>
+<p>Étudiant : Je veux me spécialiser en intelligence artificielle
+Chatbot : Voici quelques cours recommandés : IFT3395, INF4215, LOG2810</p>
+</blockquote>
+<p><strong>Limites actuelles</strong> :</p>
+<ul>
+<li>Pas encore de reformulation intelligente si le message est flou ;</li>
+<li>Les intentions ne sont pas mémorisées d’un message à l’autre.</li>
+</ul>
+<hr />
+<h3 id="3-recommandations-affichees">3. Recommandations affichées<a class="headerlink" href="#3-recommandations-affichees" title="Permanent link">&para;</a></h3>
+<p><strong>Objectif</strong> : Afficher des suggestions de cours adaptées aux intérêts exprimés.</p>
+<p><strong>État actuel</strong> :</p>
+<ul>
+<li>Le chatbot génère des recommandations textuelles directement lisibles dans l’interface.</li>
+<li>Les cours sont choisis à partir de blocs prédéfinis correspondant à des domaines d’intérêt.</li>
+</ul>
+<p><strong>Prévision</strong> :</p>
+<ul>
+<li>Les recommandations seront prochainement liées à la structure réelle du programme (via le moteur de règles) ;</li>
+<li>Une fonctionnalité d’ajout automatique dans un trimestre du calendrier est prévue (glisser-déposer ou bouton “ajouter”).</li>
+</ul>
+<hr />
+<h3 id="4-diagrammes-uml-de-sequence">4. Diagrammes UML / de séquence<a class="headerlink" href="#4-diagrammes-uml-de-sequence" title="Permanent link">&para;</a></h3>
+<p><strong>Objectif</strong> : Soutenir la conception technique par une modélisation formelle.</p>
+<p><strong>Éléments produits</strong> :</p>
+<ul>
+<li>Un <strong>diagramme de classes UML</strong> présente les composants du module chatbot : <code>ChatController</code>, <code>NLPEngine</code>, <code>SessionManager</code>, <code>PromptGenerator</code>, etc., avec leurs méthodes principales.</li>
+<li>Un <strong>diagramme de séquence</strong> détaille le déroulement d’une interaction : depuis la réception du message jusqu’à la génération et l’affichage de la réponse.</li>
+</ul>
+<hr />
+<h3 id="5-maquette">5. Maquette<a class="headerlink" href="#5-maquette" title="Permanent link">&para;</a></h3>
+<p><strong>Objectif</strong> : Préfigurer l’intégration visuelle du chatbot dans l’interface complète du planificateur.</p>
+<p><strong>État actuel</strong> :</p>
+<ul>
+<li>
+<p>Une maquette statique a été dessinée (via Figma ou papier) pour représenter :</p>
+</li>
+<li>
+<p>l’emplacement du chatbot ;</p>
+</li>
 </ul>
 
 
