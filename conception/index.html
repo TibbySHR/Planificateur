@@ -617,11 +617,71 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-conception-de-flux-de-dialogue" class="md-nav__link">
+  <a href="#conception-de-flux-de-dialogue" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Conception de flux de dialogue
+      Conception de flux de dialogue
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Conception de flux de dialogue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-scenario-1-utilissateur-avec-intention-clair" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Scénario 1: utilissateur avec intention clair
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-scenario-2-intention-floue-clarification-reussie" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Scénario 2: Intention floue → clarification réussie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-scenario-3-intention-floue-echec-des-clarifications-choix-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Scénario 3: Intention floue → échec des clarifications → choix guidé
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-scenario-4-recommandation-rejetee-nouvelle-combinaison-generee" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Scénario 4 — Recommandation rejetée → nouvelle combinaison générée
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-scenario-5-ajout-au-calendrier" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Scénario 5 — Ajout au calendrier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-scenario-6-utilisateur-avec-cours-deja-dans-le-calendrier" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Scénario 6 — Utilisateur avec cours déjà dans le calendrier
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -828,11 +888,71 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-conception-de-flux-de-dialogue" class="md-nav__link">
+  <a href="#conception-de-flux-de-dialogue" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Conception de flux de dialogue
+      Conception de flux de dialogue
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Conception de flux de dialogue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-scenario-1-utilissateur-avec-intention-clair" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Scénario 1: utilissateur avec intention clair
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-scenario-2-intention-floue-clarification-reussie" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Scénario 2: Intention floue → clarification réussie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-scenario-3-intention-floue-echec-des-clarifications-choix-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Scénario 3: Intention floue → échec des clarifications → choix guidé
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-scenario-4-recommandation-rejetee-nouvelle-combinaison-generee" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Scénario 4 — Recommandation rejetée → nouvelle combinaison générée
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-scenario-5-ajout-au-calendrier" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Scénario 5 — Ajout au calendrier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-scenario-6-utilisateur-avec-cours-deja-dans-le-calendrier" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Scénario 6 — Utilisateur avec cours déjà dans le calendrier
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -882,7 +1002,7 @@
 <h3 id="api-fastapi">API (FastAPI)<a class="headerlink" href="#api-fastapi" title="Permanent link">&para;</a></h3>
 <p>Le back-end expose une API REST dans le fichier <code>/api/chat.py</code>, qui reçoit les messages utilisateur accompagnés d’un identifiant de session. L’API :</p>
 <ul>
-<li>analyse le message à l’aide de spaCy pour en extraire les intentions (intérêts, préférences, objectifs) ;</li>
+<li>analyse le message à l’aide de spaCy et transformers pour en extraire les intentions (intérêts, préférences, objectifs) ;</li>
 <li>conserve le contexte de la session (dans la mémoire du serveur) pour permettre une interaction multi-tours ;</li>
 <li>appelle le moteur de recommandation selon les informations disponibles.</li>
 </ul>
@@ -919,6 +1039,10 @@
   Bibliothèque efficace pour l’extraction d’intentions à partir du langage naturel, intégrée côté serveur.</p>
 </li>
 <li>
+<p><strong>Rasa NLU</strong> 
+  Moteur de dialogue open source permettant de structurer des conversations multi-tours, de gérer les slots (préférences, domaines, contraintes), et d’appliquer des stratégies de relance en cas d’intention non détectée.</p>
+</li>
+<li>
 <p><strong>JSON (échange de données)</strong>
   Format léger pour les communications entre le front-end et l’API.</p>
 </li>
@@ -937,8 +1061,20 @@
 </ul>
 <p><img alt="Diagramme de architecture logiciel" src="../assets/architecture-logiciel.png" /></p>
 <h2 id="prototype">Prototype<a class="headerlink" href="#prototype" title="Permanent link">&para;</a></h2>
-<h3 id="1-conception-de-flux-de-dialogue">1. Conception de flux de dialogue<a class="headerlink" href="#1-conception-de-flux-de-dialogue" title="Permanent link">&para;</a></h3>
-<p><img alt="flux de dialogue" src="../assets/flux%20de%20dialogue.png" /></p>
+<h3 id="conception-de-flux-de-dialogue">Conception de flux de dialogue<a class="headerlink" href="#conception-de-flux-de-dialogue" title="Permanent link">&para;</a></h3>
+<p><img alt="flux de dialogue" src="../assets/dialogue_flow.png" /></p>
+<h4 id="1-scenario-1-utilissateur-avec-intention-clair">1. Scénario 1: utilissateur avec intention clair<a class="headerlink" href="#1-scenario-1-utilissateur-avec-intention-clair" title="Permanent link">&para;</a></h4>
+<p><img alt="intent clair" src="../assets/intent%20clear.png" /></p>
+<h4 id="2-scenario-2-intention-floue-clarification-reussie">2. Scénario 2: Intention floue → clarification réussie<a class="headerlink" href="#2-scenario-2-intention-floue-clarification-reussie" title="Permanent link">&para;</a></h4>
+<p><img alt="intent floue" src="../assets/intent%20floue.png" /></p>
+<h4 id="3-scenario-3-intention-floue-echec-des-clarifications-choix-guide">3. Scénario 3: Intention floue → échec des clarifications → choix guidé<a class="headerlink" href="#3-scenario-3-intention-floue-echec-des-clarifications-choix-guide" title="Permanent link">&para;</a></h4>
+<p><img alt="intent floue" src="../assets/choix%20guide.png" /></p>
+<h4 id="4-scenario-4-recommandation-rejetee-nouvelle-combinaison-generee">4. Scénario 4 — Recommandation rejetée → nouvelle combinaison générée<a class="headerlink" href="#4-scenario-4-recommandation-rejetee-nouvelle-combinaison-generee" title="Permanent link">&para;</a></h4>
+<p><img alt="Recommandation rejetée" src="../assets/new%20recommendation.png" /></p>
+<h4 id="5-scenario-5-ajout-au-calendrier">5. Scénario 5 — Ajout au calendrier<a class="headerlink" href="#5-scenario-5-ajout-au-calendrier" title="Permanent link">&para;</a></h4>
+<p><img alt="Ajout au calendrier" src="../assets/add%20to%20calender.png" /></p>
+<h4 id="6-scenario-6-utilisateur-avec-cours-deja-dans-le-calendrier">6. Scénario 6 — Utilisateur avec cours déjà dans le calendrier<a class="headerlink" href="#6-scenario-6-utilisateur-avec-cours-deja-dans-le-calendrier" title="Permanent link">&para;</a></h4>
+<p><img alt="Cours Existants" src="../assets/cours%20exist.png" /></p>
 <h3 id="dialogue-simule-utilisateur-chatbot">Dialogue simulé : Utilisateur ↔ Chatbot<a class="headerlink" href="#dialogue-simule-utilisateur-chatbot" title="Permanent link">&para;</a></h3>
 <p><strong>Utilisateur</strong> : Salut, je veux planifier mes cours pour le prochain trimestre.</p>
 <p><strong>Chatbot</strong> : Bonjour ! Pour t’aider, pourrais-tu me dire dans quel domaine tu souhaites te spécialiser ?<br />
@@ -948,14 +1084,12 @@
 <p><strong>Utilisateur</strong> : Oui, j’ai déjà validé IFT XXXX et IFT XXXX.</p>
 <p><strong>Chatbot</strong> : Voici une combinaison recommandée pour le <strong>trimestre d’automne</strong> :</p>
 <ul>
-<li><strong>INF2005 – Apprentissage automatique</strong> (3 crédits)  </li>
-<li><strong>INF2050 – Projet en IA appliquée</strong> (3 crédits)  </li>
-<li><strong>MAT2100 – Probabilités pour l’IA</strong> (3 crédits)  </li>
-<li><strong>INF1900 – Stage exploratoire</strong> <em>(optionnel)</em> (1 crédit)</li>
+<li><strong>IFT XXXX – Apprentissage automatique</strong> (3 crédits)  </li>
+<li><strong>IFT XXXX – Projet en IA appliquée</strong> (3 crédits)  </li>
 </ul>
 <p>Souhaites-tu les ajouter à ton calendrier ?</p>
 <p><strong>Utilisateur</strong> : Oui, ajoute-les.</p>
-<p><strong>Chatbot</strong> : ✅ C’est fait ! Tu peux consulter ton calendrier mis à jour à droite.<br />
+<p><strong>Chatbot</strong> : C’est fait ! Tu peux consulter ton calendrier mis à jour à droite.<br />
 As-tu besoin d’aide pour un autre trimestre ou des cours optionnels ?</p>
 
 
