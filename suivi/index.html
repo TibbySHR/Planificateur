@@ -964,6 +964,30 @@
 </ul>
 </div>
 <h2 id="semaine-4">Semaine 4<a class="headerlink" href="#semaine-4" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Prototype Phase One</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Création de l’API <code>/chat</code> avec FastAPI</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Définition des modèles Pydantic <code>ChatRequest</code> et <code>ChatResponse</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Détection d’intention via spaCy (modèle <code>fr_core_news_sm</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Intégration optionnelle de Rasa via une classe compatible (<code>RasaIntentClassifier</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Support de la reconnaissance de domaine (Informatique, Mathématiques, Biologie) avec <code>RapidFuzz</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Recommandation de cours simulée via données mock</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Gestion des clarifications : jusqu’à 5 tentatives avec relance automatique</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Fallback : proposition de 3 à 5 intentions après échec de la compréhension</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Support multi-utilisateur grâce à <code>user_id</code> dans la requête et gestion d’état par utilisateur</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Composant React (<code>ChatBox.tsx</code>) fonctionnel avec champ de saisie, bouton, affichage messages</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Persistance locale de <code>user_id</code> via <code>uuid</code> + <code>localStorage</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Ajout d’un test unitaire de base (<code>test_chat.py</code>) pour l’API</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Ajout de logs console pour le suivi des intentions détectées et des messages reçus</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Prochaines étape: Prototype Phase Two</p>
+<ul>
+<li>Ameliorer Prototype</li>
+</ul>
+</div>
 <h2 id="semaine-5">Semaine 5<a class="headerlink" href="#semaine-5" title="Permanent link">&para;</a></h2>
 <h2 id="semaine-6">Semaine 6<a class="headerlink" href="#semaine-6" title="Permanent link">&para;</a></h2>
 <h2 id="semaine-7">Semaine 7<a class="headerlink" href="#semaine-7" title="Permanent link">&para;</a></h2>
