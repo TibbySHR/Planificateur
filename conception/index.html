@@ -598,6 +598,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#algorithom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithom
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithom">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prediction-de-lintention-suivante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prédiction de l’intention suivante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandation-de-cours" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommandation de cours
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#modeles-et-diagrammes" class="md-nav__link">
     <span class="md-ellipsis">
       Modèles et diagrammes
@@ -869,6 +902,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#algorithom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithom
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithom">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prediction-de-lintention-suivante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prédiction de l’intention suivante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandation-de-cours" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommandation de cours
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#modeles-et-diagrammes" class="md-nav__link">
     <span class="md-ellipsis">
       Modèles et diagrammes
@@ -1051,6 +1117,28 @@
 <li><strong>JSON (échange de données)</strong>
   Format léger pour les communications entre le front-end et l’API.</li>
 </ul>
+<h2 id="algorithom">Algorithom<a class="headerlink" href="#algorithom" title="Permanent link">&para;</a></h2>
+<h3 id="prediction-de-lintention-suivante"><strong>Prédiction de l’intention suivante</strong><a class="headerlink" href="#prediction-de-lintention-suivante" title="Permanent link">&para;</a></h3>
+<p>Un modèle Random Forest est entraîné sur des séquences de conversations précédentes pour prédire la prochaine intention probable, en tenant compte du contexte (intention précédente, domaine, nombre de clarifications...).</p>
+<h3 id="recommandation-de-cours"><strong>Recommandation de cours</strong><a class="headerlink" href="#recommandation-de-cours" title="Permanent link">&para;</a></h3>
+<p>Le système de recommandation repose sur une série d'étapes algorithmiques modulaires et extensibles :</p>
+<ol>
+<li>Filtrage par domaine (fuzzy matching)</li>
+</ol>
+<p>Utilise RapidFuzz pour détecter le domaine d’étude (ex. "informatique") même avec des fautes de frappe ou variations lexicales.
+Les cours sont ensuite extraits dynamiquement à partir de fichiers *_courses.json selon leur code (ex. IFT pour informatique).
+2. Filtrage par disponibilité</p>
+<p>Ne recommande que les cours disponibles pour la session actuelle (ex. hiver) et non déjà complétés par l’utilisateur.
+La logique utilise les champs available_terms et une liste completed_courses.
+3. Génération de combinaisons</p>
+<p>Génère plusieurs groupes de 4 cours par domaine, en maximisant la variété.
+Chaque combinaison est présentée comme un choix pour l’utilisateur.
+4. Vérification des prérequis</p>
+<p>Après que l’utilisateur choisit une combinaison, le système vérifie si tous les prérequis sont remplis.
+Si un cours dépend d’un autre non encore complété, il est automatiquement remplacé par son prérequis.
+5. Interaction dynamique</p>
+<p>Les intentions sont suivies en temps réel, avec un historique loggé.
+Une prédiction d’intention future (via un modèle Random Forest) permet de guider la conversation.</p>
 <h2 id="modeles-et-diagrammes">Modèles et diagrammes<a class="headerlink" href="#modeles-et-diagrammes" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Diagramme de UML</strong></li>
