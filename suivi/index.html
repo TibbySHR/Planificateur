@@ -973,26 +973,31 @@
 <h2 id="semaine-5-and-semain-6">Semaine 5 and semain 6<a class="headerlink" href="#semaine-5-and-semain-6" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Implemention 1</p>
-<ul>
-<li>[x]Classification d’intention avec LSTM + fuzzy fallback (RapidFuzz)</li>
-<li>[x]Prédiction d’intention suivante avec RandomForestClassifier</li>
-<li>[x]Recommandation de cours basée sur :
-    Filtrage par domaine (fuzzy)
-    Filtrage par disponibilité (session en cours)
-    Exclusion des cours déjà suivis
-    Génération de combinaisons de 4 cours
-    Vérification automatique des prérequis et remplacement si nécessaire</li>
-<li>[x]Gestion d’état utilisateur avec historique d’intentions</li>
-<li>[x]Log automatique en .jsonl pour chaque séquence d’intentions</li>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Classification d’intention avec LSTM + fuzzy fallback (RapidFuzz)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Prédiction d’intention suivante avec RandomForestClassifier</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Recommandation de cours basée sur :<ul>
+<li>[x]Filtrage par domaine (fuzzy)</li>
+<li>[x]Filtrage par disponibilité (session en cours)</li>
+<li>[x]Exclusion des cours déjà suivis</li>
+<li>[x]Génération de combinaisons de 4 cours</li>
+<li>[x]Vérification automatique des prérequis et remplacement si nécessaire</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Gestion d’état utilisateur avec historique d’intentions</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Log automatique en .jsonl pour chaque séquence d’intentions</li>
 </ul>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Prochaines étape: Implementation 2</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Stockage des réponses utilisateur concernant les cours suivis (e.g. completed_courses en session persistante)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ajout d’une validation de conflit horaire lors de la recommandation</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Personnalisation basée sur préférences utilisateur (e.g. préférence pour le soir, cours en ligne, etc.)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Interface d’administration pour injecter de nouveaux fichiers *_courses.json ou programs.json</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ajout d’une validation de conflit horaire lors de la recommandation(??)</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Interface d’administration pour injecter de nouveaux fichiers *_courses.json ou programs.json</p>
+</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Export ou visualisation du graphe de parcours d’intentions à des fins de debug ou de formation modèle</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Préparation d’un pipeline d’entraînement automatique à partir des logs intent_sequence.jsonl</li>
 </ul>
