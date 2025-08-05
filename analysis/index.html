@@ -621,14 +621,47 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#algorithme-pourra-etre-ajuste" class="md-nav__link">
+    <nav class="md-nav" aria-label="💻Méthodologie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#approche-generale" class="md-nav__link">
     <span class="md-ellipsis">
-      Algorithme ( pourra être ajusté)
+      Approche générale
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure-de-travail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure de travail
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organisation-du-developpement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organisation du développement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites-et-choix-assumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limites et choix assumés
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -869,14 +902,47 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#algorithme-pourra-etre-ajuste" class="md-nav__link">
+    <nav class="md-nav" aria-label="💻Méthodologie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#approche-generale" class="md-nav__link">
     <span class="md-ellipsis">
-      Algorithme ( pourra être ajusté)
+      Approche générale
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure-de-travail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure de travail
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organisation-du-developpement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organisation du développement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites-et-choix-assumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limites et choix assumés
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -901,38 +967,33 @@
 
 <h1 id="etudes-preliminaires">Études préliminaires<a class="headerlink" href="#etudes-preliminaires" title="Permanent link">&para;</a></h1>
 <h2 id="analyse-du-probleme">❓Analyse du problème<a class="headerlink" href="#analyse-du-probleme" title="Permanent link">&para;</a></h2>
-<p>Lorsqu’ils planifient leur cheminement universitaire, les étudiants sont souvent confrontés à une offre de cours dense et complexe, rendant difficile l’identification des cours réellement adaptés à leurs intérêts, à leur profil ou à leur progression. Sans accompagnement intelligent, ils doivent naviguer manuellement dans les structures de programmes, vérifier les préalables et estimer les crédits restants — une tâche fastidieuse, sujette aux erreurs et rarement personnalisée.</p>
-<p>Cette difficulté est d’autant plus marquée pour les étudiants souhaitant se spécialiser dans des domaines spécifiques (IA, systèmes, développement web), ou optimiser leur charge de travail.
-Un chatbot conversationnel, capable de comprendre les préférences de l’étudiant (intérêts, cours maîtrisés, etc) à partir de requêtes formulées en langage naturel, offrirait un soutien personnalisé et interactif. Il permettrait de recommander dynamiquement des cours pertinents et compatibles avec le profil académique de chacun, facilitant ainsi une planification plus rapide, plus ciblée et mieux alignée sur les aspirations de l’étudiant.</p>
+<p>Lors de la planification de leur parcours académique, les étudiants font face à une offre de cours vaste et complexe, rendant difficile le choix de cours adaptés à leurs intérêts, leur profil ou leur avancement. En l’absence d’un accompagnement intelligent, cette tâche — impliquant la vérification des prérequis, l’estimation des crédits et la compréhension des structures de programme — demeure laborieuse, sujette aux erreurs et peu personnalisée. Un agent conversationnel capable d’interpréter les requêtes en langage naturel, en prenant en compte les préférences et acquis de l’étudiant, permettrait de recommander dynamiquement des cours pertinents, facilitant ainsi une planification plus rapide, ciblée et alignée sur ses objectifs personnels.</p>
 <h2 id="exigences">📚Exigences<a class="headerlink" href="#exigences" title="Permanent link">&para;</a></h2>
 <h3 id="fonctionnelles">🔩Fonctionnelles :<a class="headerlink" href="#fonctionnelles" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Dialogue libre et naturel avec l’étudiant:</li>
+<li>Dialogue libre en langage naturel :</li>
 </ul>
-<p>Permettre à l’étudiant d’exprimer ses besoins, objectifs ou contraintes sous forme de messages en langage courant (ex. : “je veux éviter les cours trop mathématiques”), sans format rigide.</p>
+<p>Permettre à l’étudiant d’exprimer ses besoins, objectifs ou contraintes de manière souple (ex. : « Je veux éviter les cours trop mathématiques »).</p>
 <ul>
-<li>Analyse en temps réel des messages utilisateurs:</li>
+<li>Analyse en temps réel:</li>
 </ul>
-<p>Interpréter automatiquement les intentions exprimées (domaine d’intérêt, cours maîtrisés, prérequis validés, préférences horaires) dès chaque nouvelle requête, pour fournir une réponse immédiate et adaptée.</p>
+<p>Interpréter automatiquement chaque message pour extraire les intentions et fournir une réponse immédiate et pertinente.</p>
 <ul>
-<li>Recommandation instantanée et personnalisée:</li>
+<li>Recommandations personnalisées:</li>
 </ul>
-<p>Générer une ou plusieurs suggestions de cours dès qu’une demande est formulée, en tenant compte du profil académique et du contexte extrait du dialogue. Les recommandations peuvent être adaptées à plusieurs objectifs (spécialisation, double programme, progression rapide, etc.).</p>
+<p>Générer des suggestions de cours adaptées au intérêt.</p>
 <ul>
-<li>Capacité à gérer les demandes floues ou incomplètes:</li>
+<li>Gestion des demandes incomplètes:</li>
 </ul>
-<p>Lorsque l’étudiant pose une question vague ou incomplète (ex. : “Je ne sais pas quoi prendre ce trimestre”), le chatbot est capable de réagir de manière proactive, en posant des questions ciblées pour affiner le besoin :
-“Souhaites-tu te concentrer sur un domaine en particulier ?”,
-“As-tu des contraintes de disponibilité ?”,
-“Quels cours as-tu déjà validés ?”</p>
+<p>Détecter les requêtes floues et relancer l’utilisateur avec des questions ciblées pour affiner la demande.</p>
 <ul>
-<li>Interaction multi-tours (affinage progressif):</li>
+<li>Interaction multi-tours:</li>
 </ul>
-<p>Maintenir le contexte d’une session pour permettre une discussion en plusieurs étapes : l’étudiant peut affiner ses préférences au fur et à mesure du dialogue, sans devoir tout reformuler.</p>
+<p>Maintenir le contexte d’une session afin de permettre un échange progressif où les préférences peuvent être précisées étape par étape.</p>
 <ul>
-<li>Pré-remplissage intelligent du calendrier:</li>
+<li>Pré-remplissage du calendrier:</li>
 </ul>
-<p>Une fois les recommandations validées, proposer automatiquement des répartitions de cours par trimestre, en respectant les prérequis, les disponibilités et la charge maximale. L’étudiant peut ensuite modifier ces propositions selon ses préférences. </p>
+<p>Proposer automatiquement une répartition de cours par trimestre. </p>
 <h3 id="non-fonctionnelles">🔩 Non fonctionnelles :<a class="headerlink" href="#non-fonctionnelles" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
@@ -1030,71 +1091,46 @@ b.Les modules d’algorithmes de recommandation doivent être indépendants et t
 </ul>
 <p>Le système fonctionne sans connexion directe aux systèmes académiques institutionnels, garantissant la confidentialité des données et offrant un espace de simulation libre et sécurisé.</p>
 <h2 id="methodologie">💻Méthodologie<a class="headerlink" href="#methodologie" title="Permanent link">&para;</a></h2>
+<p>Le développement du système a été réalisé en autonomie, avec une approche itérative combinant exploration technique et validation empirique des fonctionnalités. L’ensemble du projet a été conçu et implémenté par une seule personne, prenant en charge à la fois la partie front-end (interface utilisateur) et back-end (traitement des requêtes et logique de recommandation).</p>
+<h3 id="approche-generale">Approche générale<a class="headerlink" href="#approche-generale" title="Permanent link">&para;</a></h3>
+<p>Le projet suit une démarche incrémentale : les modules ont été développés et testés progressivement, en validant chaque étape à travers des cas d’usage réels. Chaque composant (analyse du langage, détection d’intention, moteur de recommandation, interface conversationnelle) a été conçu de manière modulaire pour faciliter l’itération, la maintenabilité et l’intégration.</p>
+<p>Le choix de technologies s’est orienté vers des outils flexibles et bien documentés, adaptés à un projet universitaire à taille humaine.</p>
+<h3 id="structure-de-travail">Structure de travail<a class="headerlink" href="#structure-de-travail" title="Permanent link">&para;</a></h3>
+<p>L’ensemble du code a été géré localement via un environnement de développement unifié (VS Code) avec séparation claire des responsabilités :</p>
 <ul>
-<li>Architecture technique
-Le module chatbot est intégré dans une architecture modulaire en deux parties :</li>
+<li>
+<p>Code NLP et modèles : src/services/nlp.py, prétraitement des intentions et domaines
+d’intérêt ;</p>
+</li>
+<li>
+<p>Route API principale : src/chat.py, logique de dialogue ;</p>
+</li>
+<li>Moteur de recommandation : src/services/recommendation.py, gestion des contraintes ;</li>
+<li>Interface utilisateur : React + TypeScript, communication avec l’API via fetch().</li>
 </ul>
-<p>Front-end : un composant ChatBot.js est ajouté dans l’application React, chargé de gérer l'affichage du dialogue, la saisie utilisateur, et l’envoi des messages.</p>
-<p>Back-end : un nouveau point d’entrée /api/chat.py est créé dans FastAPI pour traiter chaque message, avec transmission d’un identifiant de session.</p>
-<p>Le dialogue suit un modèle requête-réponse asynchrone, permettant une communication en temps réel avec l’interface, sans rechargement.</p>
+<h3 id="organisation-du-developpement">Organisation du développement<a class="headerlink" href="#organisation-du-developpement" title="Permanent link">&para;</a></h3>
+<p>Le développement a été divisé en quatre grandes phases :
+1. Exploration des besoins : identification des attentes fonctionnelles d’un outil d’aide à la
+planification.
+2. Prototype initial : mise en place d’un chatbot capable de reconnaître des intentions simples
+et renvoyer des suggestions de cours statiques.
+3. Amélioration du NLP : intégration de BERT, extraction d’intérêts via similarité séman-
+tique,et gestion de scénarios conversationnels flexibles
+4. Intégration front-end complète : connexion avec le calendrier, ajout de boutons inter-
+actifs.</p>
+<h3 id="limites-et-choix-assumes">Limites et choix assumés<a class="headerlink" href="#limites-et-choix-assumes" title="Permanent link">&para;</a></h3>
+<p>En raison du format individuel du projet, certains compromis ont été faits, notamment :</p>
 <ul>
-<li>Traitement du langage naturel (NLP)</li>
+<li>Faute de temps et de ressources, le système ne se connecte pas directement à une base
+MongoDB distante, mais lit les données à partir de fichiers locaux exportés depuis la base.</li>
+<li>Le modèle BERT utilisé est une version pré-entraînée, sans fine-tuning spécifique à grande
+échelle sur des données académiques réelles.</li>
+<li>Le chatbot devait initialement lire directement les choix de cours ajoutés dans le calendrier,
+mais cette fonctionnalité n’a pas pu être implémentée faute de temps et de complexité
+technique.
+Ces choix permettent néanmoins de démontrer la faisabilité d’un assistant conversationnel
+universitaire modulaire, efficace et extensible.</li>
 </ul>
-<p>Les messages envoyés par l’étudiant sont analysés avec spaCy, une bibliothèque NLP qui permet :</p>
-<p>a. d’extraire les intentions principales (domaine d’intérêt, contraintes horaires, objectifs)</p>
-<p>b. d’identifier des entités spécifiques, comme des codes de cours, des trimestres ou des préférences lexicales</p>
-<p>c. Une couche de règles personnalisées est ajoutée pour mapper ces intentions vers des éléments du programme académique.</p>
-<ul>
-<li>Gestion de session et de contexte</li>
-</ul>
-<p>Pour permettre des interactions fluides et multi-tours :</p>
-<p>a. chaque session est identifiée par un session_id côté client</p>
-<p>b. le back-end conserve en mémoire (ou optionnellement en base MongoDB) : les intentions déjà détectées; les réponses antérieures; l’état courant du dialogue</p>
-<p>Cela permet de gérer l’historique et d'adapter dynamiquement la réponse à l’étudiant, tout au long de l’échange.</p>
-<ul>
-<li>Logique d'interaction adaptative</li>
-</ul>
-<p>Le chatbot est conçu pour être proactif et guidant.</p>
-<p>a. Si la demande est claire, il propose directement des recommandations.</p>
-<p>b. Si elle est floue ou ambiguë, le chatbot pose des questions ciblées pour clarifier : “Souhaites-tu un cours plus théorique ou pratique ?”, “Dans quel domaine souhaites-tu te spécialiser ?”</p>
-<p>Ce mécanisme repose sur un état conversationnel, implémenté via une machine à états ou une logique conditionnelle souple.</p>
-<ul>
-<li>Génération des recommandations</li>
-</ul>
-<p>Une fois les intentions suffisamment claires :</p>
-<p>a. le système appelle un moteur de règles dans /utils/recommendation.py
-b. ce moteur sélectionne les cours compatibles avec :les intérêts exprimés; les préalables validés; les contraintes temporelles; les crédits restants</p>
-<p>Plusieurs combinaisons possibles sont générées, classées par pertinence.</p>
-<ul>
-<li>Intégration avec le calendrier</li>
-</ul>
-<p>Les cours recommandés sont ensuite formatés pour pouvoir :</p>
-<p>a. être affichés immédiatement dans l’interface conversationnelle</p>
-<p>b. être ajoutés automatiquement dans le calendrier de planification si l’étudiant accepte la combinaison proposée</p>
-<p>c. ou être modifiés via une interface glisser-déposer</p>
-<h2 id="algorithme-pourra-etre-ajuste">Algorithme ( pourra être ajusté)<a class="headerlink" href="#algorithme-pourra-etre-ajuste" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Entrée utilisateur (via chatbot) :</li>
-</ul>
-<p>a. Domaine d’intérêt (ex. : IA, Web, Systèmes)</p>
-<p>b. Cours ou matières dans lesquelles l’étudiant se sent à l’aise</p>
-<ul>
-<li>Filtrage des cours :</li>
-</ul>
-<p>a. Exclure les cours déjà suivis</p>
-<p>b. Identifier les cours obligatoires non encore validés</p>
-<ul>
-<li>Génération des recommandations :</li>
-</ul>
-<p>a. Prioriser les cours obligatoires restants</p>
-<p>b. Compléter avec des cours liés au domaine d’intérêt déclaré</p>
-<p>c. Respecter le nombre maximal de cours par trimestre (ex. : 4)</p>
-<ul>
-<li>Interaction avec le chatbot :</li>
-</ul>
-<p>a. Affiner les suggestions si besoin (“Tu préfères un cours plus pratique ou théorique ?”)</p>
-<p>b. Proposer plusieurs combinaisons possibles</p>
-<p>c. Insérer automatiquement la combinaison choisie dans le calendrier</p>
 
 
 
