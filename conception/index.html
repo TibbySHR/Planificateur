@@ -329,7 +329,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../results/" class="md-tabs__link">
+      <a href="../results.md" class="md-tabs__link">
         
   
   
@@ -658,15 +658,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#dialogue-simule-utilisateur-chatbot" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dialogue simulé : Utilisateur ↔ Chatbot
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -709,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../results/" class="md-nav__link">
+      <a href="../results.md" class="md-nav__link">
         
   
   
@@ -902,15 +893,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#dialogue-simule-utilisateur-chatbot" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dialogue simulé : Utilisateur ↔ Chatbot
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -960,11 +942,7 @@ segments et blocs contenant des cours.</li>
 <li>courses.json : contient les cours avec leur identifiant, nom, description, prérequis, pé-
 riodes offertes (autumn, winter, summer) et créneaux horaires.</li>
 </ul>
-<p>L’état de chaque utilisateur est conservé en mémoire via un dictionnaire Python dans state.py.
-Il inclut notamment : l’intention courante, le programme, l’intérêt, les recommandations pro-
-posées, le compteur de clarification et les cours validés.Le chargement des cours s’effectue via
-course_loader.py, qui unifie l’ensemble des fichiers *courses.json présents dans le réper-
-toire.</p>
+<p><img alt="Modèle de données" src="../assets/EA.png" /></p>
 <h2 id="choix-technologiques">Choix technologiques<a class="headerlink" href="#choix-technologiques" title="Permanent link">&para;</a></h2>
 <p>Le projet repose sur une stack moderne et modulaire, articulée autour des langages Python
 (back-end) et TypeScript (front-end), ainsi que des bibliothèques spécialisées pour le traitement
@@ -1008,7 +986,7 @@ au profit d’une approche basée sur BERT.</p>
 <ul>
 <li><strong>Diagramme de UML</strong></li>
 </ul>
-<p><img alt="Diagramme de UML" src="../assets/chatbot-uml.png" /></p>
+<p><img alt="Diagramme de UML" src="../assets/UML.png" /></p>
 <ul>
 <li><strong>Diagramme de Sequence</strong></li>
 </ul>
@@ -1021,31 +999,15 @@ au profit d’une approche basée sur BERT.</p>
 <h3 id="conception-de-flux-de-dialogue">Conception de flux de dialogue<a class="headerlink" href="#conception-de-flux-de-dialogue" title="Permanent link">&para;</a></h3>
 <p><img alt="flux de dialogue" src="../assets/dialogue_flow.png" /></p>
 <h4 id="1-scenario-1-salutation">1. Scénario 1: Salutation<a class="headerlink" href="#1-scenario-1-salutation" title="Permanent link">&para;</a></h4>
-<p>!(assets/salutation.png)</p>
+<p><img alt="Flow de salutation" src="../assets/salutation.png" /></p>
 <h4 id="2-scenario-2-demande-explicite-avec-programme-et-interet">2. Scénario 2: Demande explicite avec programme et intérêt<a class="headerlink" href="#2-scenario-2-demande-explicite-avec-programme-et-interet" title="Permanent link">&para;</a></h4>
-<p>!(assets/Demande explicite avec programme et intérêt.png)</p>
+<p><img alt="Flow de demande" src="../assets/Demande%20explicite%20avec%20programme%20et%20interet.png" /></p>
 <h4 id="3-scenario-3-demande-avec-seulement-interet">3. Scénario 3: Demande avec seulement intérêt<a class="headerlink" href="#3-scenario-3-demande-avec-seulement-interet" title="Permanent link">&para;</a></h4>
-<p>!(assets/Demande avec seulement intérêt.png)</p>
+<p><img alt="Flow de demande" src="../assets/Demande%20avec%20seulement%20interet.png" /></p>
 <h4 id="4-scenario-4-demande-avec-seulement-programme">4. Scénario 4 — Demande avec seulement programme<a class="headerlink" href="#4-scenario-4-demande-avec-seulement-programme" title="Permanent link">&para;</a></h4>
-<p>!(assets/Demande avec seulement programme.png)</p>
+<p><img alt="Flow de demande" src="../assets/Demande%20avec%20seulement%20programme.png" /></p>
 <h4 id="5-scenario-5-choix-de-cours">5. Scénario 5 — Choix de cours<a class="headerlink" href="#5-scenario-5-choix-de-cours" title="Permanent link">&para;</a></h4>
-<p>!(assets/Choix de cours.png)</p>
-<h3 id="dialogue-simule-utilisateur-chatbot">Dialogue simulé : Utilisateur ↔ Chatbot<a class="headerlink" href="#dialogue-simule-utilisateur-chatbot" title="Permanent link">&para;</a></h3>
-<p><strong>Utilisateur</strong> : Salut, je veux planifier mes cours pour le prochain trimestre.</p>
-<p><strong>Chatbot</strong> : Bonjour ! Pour t’aider, pourrais-tu me dire dans quel domaine tu souhaites te spécialiser ?<br />
-<em>(exemples : Intelligence Artificielle, Développement Web, Systèmes...)</em></p>
-<p><strong>Utilisateur</strong> : Plutôt en Intelligence Artificielle.</p>
-<p><strong>Chatbot</strong> : Très bien ! As-tu déjà validé certains cours obligatoires ?  </p>
-<p><strong>Utilisateur</strong> : Oui, j’ai déjà validé IFT XXXX et IFT XXXX.</p>
-<p><strong>Chatbot</strong> : Voici une combinaison recommandée pour le <strong>trimestre d’automne</strong> :</p>
-<ul>
-<li><strong>IFT XXXX – Apprentissage automatique</strong> (3 crédits)  </li>
-<li><strong>IFT XXXX – Projet en IA appliquée</strong> (3 crédits)  </li>
-</ul>
-<p>Souhaites-tu les ajouter à ton calendrier ?</p>
-<p><strong>Utilisateur</strong> : Oui, ajoute-les.</p>
-<p><strong>Chatbot</strong> : C’est fait ! Tu peux consulter ton calendrier mis à jour à droite.<br />
-As-tu besoin d’aide pour un autre trimestre ou des cours optionnels ?</p>
+<p><img alt="Flow de demande" src="../assets/Choix%20de%20cours.png" /></p>
 
 
 

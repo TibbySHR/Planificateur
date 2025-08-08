@@ -329,7 +329,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../results/" class="md-tabs__link">
+      <a href="../results.md" class="md-tabs__link">
         
   
   
@@ -537,7 +537,7 @@
           <li class="md-nav__item">
   <a href="#non-fonctionnelles" class="md-nav__link">
     <span class="md-ellipsis">
-      🔩 Non fonctionnelles :
+      🔩Non-fonctionnelles :
     </span>
   </a>
   
@@ -724,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../results/" class="md-nav__link">
+      <a href="../results.md" class="md-nav__link">
         
   
   
@@ -818,7 +818,7 @@
           <li class="md-nav__item">
   <a href="#non-fonctionnelles" class="md-nav__link">
     <span class="md-ellipsis">
-      🔩 Non fonctionnelles :
+      🔩Non-fonctionnelles :
     </span>
   </a>
   
@@ -967,55 +967,38 @@
 
 <h1 id="etudes-preliminaires">Études préliminaires<a class="headerlink" href="#etudes-preliminaires" title="Permanent link">&para;</a></h1>
 <h2 id="analyse-du-probleme">❓Analyse du problème<a class="headerlink" href="#analyse-du-probleme" title="Permanent link">&para;</a></h2>
-<p>Lors de la planification de leur parcours académique, les étudiants font face à une offre de cours vaste et complexe, rendant difficile le choix de cours adaptés à leurs intérêts, leur profil ou leur avancement. En l’absence d’un accompagnement intelligent, cette tâche — impliquant la vérification des prérequis, l’estimation des crédits et la compréhension des structures de programme — demeure laborieuse, sujette aux erreurs et peu personnalisée. Un agent conversationnel capable d’interpréter les requêtes en langage naturel, en prenant en compte les préférences et acquis de l’étudiant, permettrait de recommander dynamiquement des cours pertinents, facilitant ainsi une planification plus rapide, ciblée et alignée sur ses objectifs personnels.</p>
+<p>Ce projet consiste à développer un agent conversationnel intelligent capable d’assister les étudiants dans la planification de leur parcours académique. Basé sur le traitement du langage naturel (BERT, appariement sémantique) et connecté à une base de données de cours et de programmes, le chatbot interprète les requêtes en langage courant, identifie les intentions et les intérêts, puis recommande dynamiquement des cours pertinents. Il prend en compte les prérequis, les semestres disponibles et le niveau d’avancement, offrant ainsi une planification plus rapide, personnalisée et alignée sur les objectifs académiques de l’étudiant.</p>
 <h2 id="exigences">📚Exigences<a class="headerlink" href="#exigences" title="Permanent link">&para;</a></h2>
+<p>Le système doit répondre à un ensemble d'exigences assurant à la fois son utilité pour l'utilisateur final et sa robustesse technique.</p>
 <h3 id="fonctionnelles">🔩Fonctionnelles :<a class="headerlink" href="#fonctionnelles" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Dialogue libre en langage naturel :</li>
-</ul>
+<p><strong>Dialogue libre en langage naturel</strong> :</p>
 <p>Permettre à l’étudiant d’exprimer ses besoins, objectifs ou contraintes de manière souple (ex. : « Je veux éviter les cours trop mathématiques »).</p>
-<ul>
-<li>Analyse en temps réel:</li>
-</ul>
+<p><strong>Analyse en temps réel</strong>:</p>
 <p>Interpréter automatiquement chaque message pour extraire les intentions et fournir une réponse immédiate et pertinente.</p>
-<ul>
-<li>Recommandations personnalisées:</li>
-</ul>
+<p><strong>Recommandations personnalisées</strong>:</p>
 <p>Générer des suggestions de cours adaptées au intérêt.</p>
-<ul>
-<li>Gestion des demandes incomplètes:</li>
-</ul>
+<p><strong>Gestion des demandes incomplètes</strong>:</p>
 <p>Détecter les requêtes floues et relancer l’utilisateur avec des questions ciblées pour affiner la demande.</p>
-<ul>
-<li>Interaction multi-tours:</li>
-</ul>
+<p><strong>Interaction multi-tours</strong>:</p>
 <p>Maintenir le contexte d’une session afin de permettre un échange progressif où les préférences peuvent être précisées étape par étape.</p>
-<ul>
-<li>Pré-remplissage du calendrier:</li>
-</ul>
+<p><strong>Pré-remplissage du calendrier</strong>:</p>
 <p>Proposer automatiquement une répartition de cours par trimestre. </p>
-<h3 id="non-fonctionnelles">🔩 Non fonctionnelles :<a class="headerlink" href="#non-fonctionnelles" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p>Performance :<br />
-a.Le calcul des recommandations doit être effectué en moins de 2 secondes.<br />
-b.L’interface doit être réactive, sans latence visible lors du remplissage des trimestres.  </p>
-</li>
-<li>
-<p>Compatibilité :<br />
-a.Compatible avec les navigateurs récents (Chrome, Firefox, Edge).<br />
-b.Responsive : affichage optimisé pour les écrans desktop et tablette.  </p>
-</li>
-<li>Sécurité :<br />
-a.Les données saisies par l’étudiant (cours suivis, préférences) doivent être conservées de manière sécurisée.<br />
-b.Les recommandations de cours ne doivent pas divulguer des informations personnelles ou des données sensibles.  </li>
-<li>Extensibilité :<br />
-a.Le système doit permettre l’ajout futur de nouveaux programmes, cours ou modules sans refonte majeure de l’architecture.<br />
-b.L’algorithme de recommandation doit être facilement configurable pour intégrer de nouvelles règles (ex. : préalables supplémentaires, nouveaux domaines d’intérêt).  </li>
-<li>Maintenabilité :<br />
-a.Le code source doit être bien structuré et documenté pour permettre des mises à jour ultérieures.<br />
-b.Les modules d’algorithmes de recommandation doivent être indépendants et testables.</li>
-</ol>
+<h3 id="non-fonctionnelles">🔩Non-fonctionnelles :<a class="headerlink" href="#non-fonctionnelles" title="Permanent link">&para;</a></h3>
+<p><strong>Performance</strong>
+- Le calcul des recommandations doit s’effectuer en moins de 2 secondes, afin d’éviter toute perte d’engagement de l’utilisateur.
+- L’interface doit être fluide et réactive, sans latence perceptible lors des interactions, pour assurer une expérience optimale.</p>
+<p><strong>Compatibilité</strong>
+- Le système doit fonctionner sur les principaux navigateurs modernes (Chrome, Firefox, Edge), pour garantir l’accessibilité à tous les utilisateurs.
+- L’interface doit être responsive, optimisée pour les écrans desktop et tablette, afin de s’adapter aux différents contextes d’utilisation.</p>
+<p><strong>Sécurité</strong>
+- Les données personnelles (cours suivis, préférences) doivent être conservées de manière sécurisée, pour protéger la vie privée de l’utilisateur.
+- Les recommandations ne doivent pas révéler d’informations sensibles, afin de respecter la confidentialité.</p>
+<p><strong>Extensibilité</strong>
+- Le système doit permettre l’ajout futur de programmes, cours ou règles sans refonte majeure, pour accompagner l’évolution de l’offre académique.
+- L’algorithme de recommandation doit être configurable pour intégrer de nouveaux cas d’usage, assurant sa pérennité.</p>
+<p><strong>Maintenabilité</strong>
+- Le code source doit être structuré et documenté pour faciliter les évolutions, réduisant le coût de maintenance.
+- Les modules doivent être indépendants, testables et facilement remplaçables, afin de simplifier les mises à jour.</p>
 <h2 id="recherche-de-solutions">🔍Recherche de solutions<a class="headerlink" href="#recherche-de-solutions" title="Permanent link">&para;</a></h2>
 <h3 id="outils-de-planification-academique-existants-et-analyse-comparative">Outils de planification académique existants et analyse comparative<a class="headerlink" href="#outils-de-planification-academique-existants-et-analyse-comparative" title="Permanent link">&para;</a></h3>
 <h4 id="degreeworks">✅DegreeWorks<a class="headerlink" href="#degreeworks" title="Permanent link">&para;</a></h4>
@@ -1109,15 +1092,25 @@ d’intérêt ;</p>
 <li>Interface utilisateur : React + TypeScript, communication avec l’API via fetch().</li>
 </ul>
 <h3 id="organisation-du-developpement">Organisation du développement<a class="headerlink" href="#organisation-du-developpement" title="Permanent link">&para;</a></h3>
-<p>Le développement a été divisé en quatre grandes phases :
-1. Exploration des besoins : identification des attentes fonctionnelles d’un outil d’aide à la
-planification.
-2. Prototype initial : mise en place d’un chatbot capable de reconnaître des intentions simples
-et renvoyer des suggestions de cours statiques.
-3. Amélioration du NLP : intégration de BERT, extraction d’intérêts via similarité séman-
-tique,et gestion de scénarios conversationnels flexibles
-4. Intégration front-end complète : connexion avec le calendrier, ajout de boutons inter-
-actifs.</p>
+<p>Le développement a été divisé en quatre grandes phases, chacune avec une durée estimée :</p>
+<ol>
+<li>
+<p><strong>Exploration des besoins</strong> (2 semaines)<br />
+   Cette phase a permis d’identifier précisément les attentes fonctionnelles et techniques d’un outil d’aide à la planification académique, en se basant sur des scénarios d’utilisation concrets.</p>
+</li>
+<li>
+<p><strong>Prototype initial</strong> (3 semaines)<br />
+   Un premier chatbot a été développé, capable de reconnaître des intentions simples et de renvoyer des suggestions de cours statiques afin de valider la faisabilité du concept.</p>
+</li>
+<li>
+<p><strong>Amélioration du NLP</strong> (5 semaines)<br />
+   Cette étape a consisté à intégrer le modèle BERT, à mettre en place l’extraction d’intérêts via similarité sémantique et à gérer des scénarios conversationnels plus flexibles pour améliorer la pertinence des recommandations.</p>
+</li>
+<li>
+<p><strong>Intégration front-end complète</strong> (2 semaines)<br />
+   Le chatbot a été connecté au calendrier académique et enrichi de boutons interactifs, offrant ainsi une expérience utilisateur fluide et interactive.</p>
+</li>
+</ol>
 <h3 id="limites-et-choix-assumes">Limites et choix assumés<a class="headerlink" href="#limites-et-choix-assumes" title="Permanent link">&para;</a></h3>
 <p>En raison du format individuel du projet, certains compromis ont été faits, notamment :</p>
 <ul>

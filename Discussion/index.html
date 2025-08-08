@@ -12,13 +12,9 @@
         <meta name="author" content="Louis-Edouard Lafontant">
       
       
-        <link rel="canonical" href="https://TibbySHR.github.io/Planificateur/results/">
+        <link rel="canonical" href="https://TibbySHR.github.io/Planificateur/Discussion/">
       
       
-        <link rel="prev" href="../evaluation/">
-      
-      
-        <link rel="next" href="../references/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>Résultats - IFT3150 - Planificateur Chatbot</title>
+        <title>Discussion critique - IFT3150 - Planificateur Chatbot</title>
       
     
     
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#resultats" class="md-skip">
+        <a href="#discussion-critique" class="md-skip">
           Aller au contenu
         </a>
       
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Résultats
+              Discussion critique
             
           </span>
         </div>
@@ -325,11 +321,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../results.md" class="md-tabs__link">
         
   
   
@@ -520,32 +514,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Résultats
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../results.md" class="md-nav__link">
         
   
   
@@ -556,53 +528,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#fonctionnalites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fonctionnalités
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demonstration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Démonstration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bilan" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bilan
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -656,27 +581,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#fonctionnalites" class="md-nav__link">
+  <a href="#analyse-de-la-solution-developpee" class="md-nav__link">
     <span class="md-ellipsis">
-      Fonctionnalités
+      Analyse de la solution développée
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#demonstration" class="md-nav__link">
+  <a href="#problemes-rencontres-et-solutions" class="md-nav__link">
     <span class="md-ellipsis">
-      Démonstration
+      Problèmes rencontrés et solutions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bilan" class="md-nav__link">
+  <a href="#ameliorations-envisageables" class="md-nav__link">
     <span class="md-ellipsis">
-      Bilan
+      Améliorations envisageables
     </span>
   </a>
   
@@ -701,18 +626,24 @@
   
 
 
-<h1 id="resultats">Résultats<a class="headerlink" href="#resultats" title="Permanent link">&para;</a></h1>
-<h2 id="fonctionnalites">Fonctionnalités<a class="headerlink" href="#fonctionnalites" title="Permanent link">&para;</a></h2>
+<h1 id="discussion-critique">Discussion critique<a class="headerlink" href="#discussion-critique" title="Permanent link">&para;</a></h1>
+<h2 id="analyse-de-la-solution-developpee">Analyse de la solution développée<a class="headerlink" href="#analyse-de-la-solution-developpee" title="Permanent link">&para;</a></h2>
+<p>Le système fonctionne globalement et parvient à proposer des recommandations cohérentes, mais sa robustesse reste limitée dans certains cas complexes. Le traitement des intentions multiples dans une seule entrée, la gestion des états de dialogue asynchrones ou encore la capacité à interpréter correctement les entrées incomplètes ont nécessité plusieurs itérations. Des choix technologiques ont permis de résoudre certaines limites, mais d'autres, comme la lenteur du traitement sémantique, subsistent et influencent l’expérience utilisateur.</p>
+<h2 id="problemes-rencontres-et-solutions">Problèmes rencontrés et solutions<a class="headerlink" href="#problemes-rencontres-et-solutions" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Décrire les fonctionnalités implémentées.</li>
+<li><strong>Structuration des données limitée</strong> : les fichiers de cours n’incluent pas de catégories explicites. La correspondance repose uniquement sur les titres et descriptions, ce qui limite la précision.</li>
+<li><strong>Détection d’intention instable</strong> : les approches initiales (spaCy, fuzzywuzzy, Rasa NLU) ont été abandonnées. BERT s’est avéré plus robuste.</li>
+<li><strong>Problèmes de performance</strong> : le traitement sémantique de tous les cours est coûteux. Aucune indexation n’a encore été mise en place.</li>
+<li><strong>Écriture du code complexe</strong> : le premier design était rigide et peu adapté à des entrées utilisateur imprévues. Après plusieurs tests et échanges, le flow a été repensé pour gérer différents ordres d'entrée (intention, programme, intérêt).</li>
+<li><strong>Débogage difficile</strong> : une partie significative du temps a été consacrée à traquer des bugs. L’aide des LLMs (chatbots IA) s’est révélée limitée. Seule une lecture attentive du code, ligne par ligne, accompagnée de tests ciblés, a permis de stabiliser le système.</li>
 </ul>
-<h2 id="demonstration">Démonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h2>
+<h2 id="ameliorations-envisageables">Améliorations envisageables<a class="headerlink" href="#ameliorations-envisageables" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Inclure des captures d'écran ou des démonstrations du système.</li>
-</ul>
-<h2 id="bilan">Bilan<a class="headerlink" href="#bilan" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Évaluer la réalisation des objectifs initiaux.</li>
+<li><strong>Approfondir la logique de recommandation</strong> : après que l’utilisateur ait sélectionné un groupe de cours, le système pourrait automatiquement vérifier les prérequis manquants et proposer des alternatives compatibles.</li>
+<li><strong>Améliorer la robustesse du NLP</strong> : l’efficacité de la classification d’intention et de la détection d’intérêt pourrait être renforcée par un jeu de données plus large et mieux annoté.</li>
+<li><strong>Optimiser les performances algorithmiques</strong> : certaines fonctions (notamment la recommandation sémantique) sont encore trop lentes et consomment beaucoup de mémoire. Une simplification du code et l’usage de structures plus efficaces seraient bénéfiques.</li>
+<li><strong>Exploiter directement les choix faits dans le calendrier</strong> : dans l’idéal, le chatbot pourrait détecter les cours déjà placés dans le calendrier et adapter ses réponses sans poser de questions redondantes.</li>
+<li><strong>Centraliser le dialogue dans une seule interface</strong> : au lieu d’avoir un chatbot dans chaque carte de semestre, une seule interface globale serait plus ergonomique. Le système pourrait alors utiliser une fonction d’horodatage (par exemple <code>time.time()</code> en Python) pour détecter la carte de semestre active au moment de l’interaction, et ainsi appliquer un filtre temporel intelligent sur les cours proposés.</li>
 </ul>
 
 
